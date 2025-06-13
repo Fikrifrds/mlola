@@ -44,7 +44,7 @@ export default function Home() {
       name: "Datafawn",
       domain: "datafawn.com",
       description: "Advanced data analytics and visualization platform that transforms raw data into actionable insights. Perfect for businesses looking to make data-driven decisions.",
-      image: "/product_images/datafawn.png",
+      image: "/product_logos/dataFawn.png",
       features: ["AI Powered Data Analytics", "Predictive Analytics", "Machine Learning", "Data Visualization"],
       category: "Data Analytics"
     },
@@ -52,7 +52,7 @@ export default function Home() {
       name: "Tubegrasp",
       domain: "tubegrasp.com", 
       description: "Powerful video content management and analytics tool designed for content creators and marketers to optimize their video strategy.",
-      image: "/product_images/tubegrasp.png",
+      image: "/product_logos/tubegrasp.png",
       features: ["YouTube Video Analytics", "AI Search", "AI Powered Knowledge Base"],
       category: "Video Analytics"
     },
@@ -60,7 +60,7 @@ export default function Home() {
       name: "Conversease",
       domain: "conversease.com",
       description: "AI-powered conversation platform that enhances customer communication and automates support workflows for businesses.",
-      image: "/product_images/conversease.png", 
+      image: "/product_logos/conversease.png", 
       features: ["AI Chat Tool", "AI Chatbot", "AI Chat Assistant"],
       category: "AI Communication"
     },
@@ -68,7 +68,7 @@ export default function Home() {
       name: "Denahku",
       domain: "denahku.com",
       description: "Comprehensive design and planning application for creating floor plans and 2D visualizations.",
-      image: "/product_images/denahku.png",
+      image: "/product_logos/denahku.svg",
       features: ["Floor Plan", "2D View", "Design"],
       category: "Design Tools"
     },
@@ -76,7 +76,7 @@ export default function Home() {
       name: "Grammarquick",
       domain: "grammarquick.com",
       description: "Advanced grammar checking and writing enhancement tool powered by AI to improve writing quality and communication.",
-      image: "/product_images/grammarquick.png",
+      image: "/product_logos/grammarquick.avif",
       features: ["Grammar Check", "Style Enhancement", "Real-time Suggestions"],
       category: "Writing Tools"
     }
@@ -214,14 +214,17 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
               {products.map((product, index) => (
                 <article key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" role="listitem" itemScope itemType="https://schema.org/SoftwareApplication">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={product.image}
-                      alt={`${product.name} application interface showing ${product.features.join(', ')}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                      itemProp="image"
-                    />
+                  <div className="flex justify-center items-center h-40 bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div className="w-24 h-24 rounded-full bg-white shadow-md flex items-center justify-center overflow-hidden">
+                      <Image
+                        src={product.image}
+                        alt={`${product.name} logo`}
+                        width={80}
+                        height={80}
+                        className="object-contain p-2"
+                        itemProp="image"
+                      />
+                    </div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
@@ -317,14 +320,7 @@ export default function Home() {
                 className="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors font-medium"
                 aria-label="Contact sales via email"
               >
-                Contact Sales
-              </a>
-              <a 
-                href="mailto:fikri.firdaus26@gmail.com" 
-                className="border border-gray-600 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors font-medium"
-                aria-label="Contact technical support via email"
-              >
-                Technical Support
+                Contact Us
               </a>
             </div>
           </div>
@@ -373,9 +369,7 @@ export default function Home() {
                 <h4 className="text-white font-medium mb-4">Connect</h4>
                 <nav role="navigation" aria-label="Social media links">
                   <ul className="space-y-2 text-sm">
-                    <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors">GitHub</a></li>
+                    <li><a href="mailto:fikri.firdaus26@gmail.com"  className="hover:text-white transition-colors">Contact</a></li>
                   </ul>
                 </nav>
               </div>
