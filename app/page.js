@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 
 // Metadata for SEO
 export const metadata = {
@@ -156,9 +157,9 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">
-                <a href="/" className="text-3xl font-bold text-black hover:text-gray-700 transition-colors" aria-label="mlola homepage">
+                <Link href="/" className="text-3xl font-bold text-black hover:text-gray-700 transition-colors" aria-label="mlola homepage">
                   mlola
-                </a>
+                </Link>
               </div>
               <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
                 <a href="#products" className="text-gray-600 hover:text-blue-600 transition-colors" aria-label="View our products">Products</a>
@@ -312,7 +313,7 @@ export default function Home() {
             <h2 id="contact-heading" className="text-4xl font-bold mb-6">Get in Touch</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Ready to transform your business with our innovative solutions? 
-              Let's discuss how we can help you achieve your goals.
+              Let&apos;s discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
