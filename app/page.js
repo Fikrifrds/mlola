@@ -399,7 +399,7 @@ export default function Home() {
               </div>
               <h2 id="solutions-heading" className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">Solving Your Business Challenges</h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Discover how mlola's AI products can transform your business by addressing specific operational challenges and driving measurable results.
+                Discover how mlola&apos;s AI products can transform your business by addressing specific operational challenges and driving measurable results.
               </p>
             </div>
 
@@ -459,7 +459,7 @@ export default function Home() {
                   mlola is an AI product company that develops practical SaaS solutions for businesses. We build software designed to help organizations work more efficiently and serve their customers better.
                 </p>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-                  Our team focuses on creating user-friendly AI tools that solve real problems. We're committed to building products that deliver genuine value to the businesses that use them.
+                  Our team focuses on creating user-friendly AI tools that solve real problems. We&apos;re committed to building products that deliver genuine value to the businesses that use them.
                 </p>
                 <div className="grid grid-cols-2 gap-8 mb-8">
                   <div className="text-center p-6 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm">
@@ -502,7 +502,7 @@ export default function Home() {
             </div>
             <h2 id="contact-heading" className="text-5xl md:text-6xl font-bold mb-8">Ready to Discover the Power of AI?</h2>
             <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Have questions about how mlola's AI products can benefit your organization? Contact us to learn more or schedule a demo of our solutions.
+              Have questions about how mlola&apos;s AI products can benefit your organization? Contact us to learn more or schedule a demo of our solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
