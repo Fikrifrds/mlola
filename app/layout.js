@@ -25,21 +25,12 @@ export const metadata = {
     url: "https://mlola.com",
     siteName: "Mlola Indonesia",
     locale: "id_ID",
-    type: "website",
-    images: [
-      {
-        url: "https://mlola.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Mlola - Solusi AI Indonesia"
-      }
-    ]
+    type: "website"
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Mlola - Solusi AI & Otomasi Bisnis Indonesia", 
-    description: "Penyedia solusi AI terpercaya untuk bisnis Indonesia. RAG system, otomasi bisnis, integrasi ChatGPT.",
-    images: ["https://mlola.com/og-image.jpg"]
+    description: "Penyedia solusi AI terpercaya untuk bisnis Indonesia. RAG system, otomasi bisnis, integrasi ChatGPT."
   },
   alternates: {
     canonical: "https://mlola.com"

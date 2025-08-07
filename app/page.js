@@ -27,7 +27,6 @@ function HomePage() {
     "description": "Penyedia solusi AI dan otomasi bisnis terpercaya di Indonesia. Spesialisasi RAG system, integrasi ChatGPT, otomasi bisnis, dan analisis data untuk perusahaan Indonesia.",
     "url": "https://mlola.com",
     "logo": "https://mlola.com/mlola-logo.svg",
-    "image": "https://mlola.com/og-image.jpg",
     "foundingDate": "2024",
     "foundingLocation": {
       "@type": "Place",
