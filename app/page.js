@@ -23,7 +23,7 @@ export const metadata = {
   keywords: 'AI solutions, business automation, private RAG, AI integration, data analytics, secure AI deployment, custom AI development',
   openGraph: {
     title: 'Mlola - AI Solutions & Business Automation',
-    description: 'Transform your business with AI solutions, private RAG deployment, and custom integration. Deploy secure AI models on your infrastructure while maintaining complete data privacy.',
+    description: 'Transform your business with AI solutions, flexible deployment options, and custom integration. Choose on-premise deployment for control or cost-effective third-party APIs.',
     url: 'https://mlola.com',
     siteName: 'Mlola',
     images: [
@@ -40,7 +40,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mlola - AI Solutions & Business Automation',
-    description: 'Transform your business with AI solutions, private RAG deployment, and custom integration. Deploy secure AI models on your infrastructure while maintaining complete data privacy.',
+    description: 'Transform your business with AI solutions, flexible deployment options, and custom integration. Choose on-premise deployment for control or cost-effective third-party APIs.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -93,7 +93,7 @@ export default function Home() {
     },
     {
       challenge: "Want to implement AI without compromising data security?",
-      solution: "Our Private RAG solutions deploy AI models directly on your infrastructure, ensuring complete data privacy and control."
+      solution: "Choose from our flexible AI deployment options: Private RAG on your infrastructure for enhanced control, or cost-effective third-party API integrations."
     },
     {
       challenge: "Struggling to extract insights from your business data?",
@@ -267,8 +267,8 @@ export default function Home() {
               </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Mlola delivers comprehensive AI solutions including business automation, data analytics, private RAG deployment, 
-              and custom AI integration. Deploy secure AI models on your infrastructure while maintaining complete data control.
+              Mlola delivers comprehensive AI solutions including business automation, data analytics, flexible AI deployment, 
+              and custom integration. Choose from on-premise deployment for maximum control or cost-effective third-party APIs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -294,7 +294,7 @@ export default function Home() {
               
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Private RAG</h3>
-                <p className="text-slate-600">Secure AI deployment on your infrastructure with complete data control</p>
+                <p className="text-slate-600">Flexible AI deployment: on-premise for maximum control or third-party APIs for cost efficiency</p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
@@ -336,11 +336,6 @@ export default function Home() {
                         {feature}
                       </div>
                     ))}
-                  </div>
-                  <div className="border-t border-gray-200 pt-4 mt-auto">
-                    <div className="text-sm text-slate-500">
-                      <span><strong>Target:</strong> {service.targetClients}</span>
-                    </div>
                   </div>
                 </article>
               ))}
@@ -396,55 +391,53 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="bg-gray-100 text-slate-700 px-6 py-3 rounded-full text-sm font-medium mb-6 inline-block">
-                  About Mlola
-                </div>
                 <h2 id="about-heading" className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
-                  About <span className="text-blue-600">Mlola</span>
+                  How <span className="text-blue-600">Mlola</span> Adapts AI Solutions to Your Business
                 </h2>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Mlola is a comprehensive AI solutions company that specializes in business automation, data analytics, and private AI deployment. We help organizations transform their operations through intelligent automation while maintaining complete data security and control.
+                  Mlola is an AI solutions company focused on business automation, data analytics, and AI deployment. We help organizations explore AI opportunities while considering their specific requirements for data security and operational needs.
+                </p>
+                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                  Our team works on developing AI solutions that range from implementing RAG systems to creating custom integrations for business processes. We approach each project with attention to the practical challenges of AI adoption in business environments.
                 </p>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-                  Our expertise spans from implementing RAG/Private RAG solutions on client infrastructure to developing custom AI integrations that modernize traditional business processes. We also create AI products that can work for client projects, demonstrating our capabilities across various industries.
+                  We recognize that adopting AI technology involves considerations around compliance, scalability, and integration. Our goal is to develop solutions that address these practical requirements while providing value to your business operations.
                 </p>
-                <div className="grid grid-cols-2 gap-8 mb-8">
-                  <div className="text-center p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">4</div>
-                    <div className="text-slate-600 font-medium">Core AI Services</div>
-                  </div>
-                  <div className="text-center p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">5</div>
-                    <div className="text-slate-600 font-medium">AI Products Built</div>
-                  </div>
-                </div>
               </div>
               <div className="relative">
                 <div className="bg-white border border-gray-200 rounded-lg shadow-md p-12 text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-lg mb-8">
-                    <Shield className="h-10 w-10 text-white" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 mb-6">
+                    <Image src="/mlola-logo.svg" alt="Mlola Logo" width={40} height={40} className="w-20 h-20" />
                   </div>
-                  <h3 className="text-3xl font-bold text-slate-900 mb-6">Secure AI Solutions</h3>
+                  <h3 className="text-3xl font-bold text-slate-900 mb-6">Flexible AI Solutions</h3>
                   <p className="text-slate-600 leading-relaxed text-lg mb-8">
-                    We specialize in deploying AI models directly on client infrastructure, ensuring complete data privacy and security. Our Private RAG solutions enable businesses to leverage powerful AI capabilities without compromising sensitive information.
+                    We provide adaptable AI deployment strategies tailored to your specific requirements and budget. Whether you need maximum security with on-premise deployment, cost-efficiency with third-party APIs, or hybrid approaches, our team delivers solutions that align with your business goals and technical constraints.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2 text-slate-600">
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span>100% Private</span>
+                      <span>Private Deployment</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>On-Premise</span>
+                      <span>On-Premise Options</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>Secure</span>
+                      <span>Security Focused</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>Scalable</span>
+                      <span>Flexible Solutions</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span>Cost-Effective APIs</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                      <span>Multiple Deployment Options</span>
                     </div>
                   </div>
                 </div>
@@ -489,8 +482,8 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-slate-900">100% Private</h3>
-                <p className="text-slate-600 text-sm">Your data stays on your infrastructure</p>
+                <h3 className="text-lg font-semibold mb-2 text-slate-900">Data Privacy</h3>
+                <p className="text-slate-600 text-sm">Your data can stay on your infrastructure</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center">
