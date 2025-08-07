@@ -222,10 +222,10 @@ export default function Home() {
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
-              <a href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-                <img src="/mlola-logo.svg" alt="Mlola Logo" className="w-10 h-10" />
+              <Link href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+                <Image src="/mlola-logo.svg" alt="Mlola Logo" width={40} height={40} className="w-10 h-10" />
                 <span className="text-xl font-semibold text-slate-800">Mlola</span>
-              </a>
+              </Link>
               
               <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
                 <a href="#services" className="text-slate-600 hover:text-slate-900 font-medium text-sm">AI Solutions</a>
@@ -247,7 +247,7 @@ export default function Home() {
                   className="bg-orange-50 border border-orange-200 px-4 py-2 rounded-lg font-medium hover:bg-orange-100 hover:border-orange-300 flex items-center gap-2 transition-all duration-200"
                   title="Visit DataFawn"
                 >
-                  <img src="/product_logos/dataFawn.png" alt="DataFawn Logo" className="w-5 h-5" />
+                  <Image src="/product_logos/dataFawn.png" alt="DataFawn Logo" width={20} height={20} className="w-5 h-5" />
                   <span className="text-sm font-semibold hidden lg:inline">Datafawn</span>
                 </a>
               </div>
@@ -518,7 +518,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               <div className="md:col-span-2">
                 <div className="flex items-center gap-3 mb-6">
-                  <img src="/mlola-logo.svg" alt="Mlola Logo" className="w-10 h-10" />
+                  <Image src="/mlola-logo.svg" alt="Mlola Logo" width={40} height={40} className="w-10 h-10" />
                   <span className="text-2xl font-bold">Mlola</span>
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed max-w-md">
