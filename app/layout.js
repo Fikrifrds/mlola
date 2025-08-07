@@ -14,6 +14,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "mlola - Innovative Tech Solutions",
   description: "Discover cutting-edge technology products including Datafawn, Tubegrasp, Conversease, Denahku, and Grammarquick. Innovative solutions for modern businesses.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
