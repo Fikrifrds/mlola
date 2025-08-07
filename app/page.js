@@ -222,7 +222,7 @@ export default function Home() {
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
-              <a href="#top" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+              <a href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
                 <img src="/mlola-logo.svg" alt="Mlola Logo" className="w-10 h-10" />
                 <span className="text-xl font-semibold text-slate-800">Mlola</span>
               </a>
