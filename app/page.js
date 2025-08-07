@@ -1,28 +1,40 @@
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Sparkles, Users, Building2, TrendingUp } from "lucide-react";
+import { 
+  ArrowRight, 
+  Brain, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  Phone, 
+  Mail, 
+  Calendar, 
+  Cog, 
+  Database,
+  Shield
+} from 'lucide-react'
 
 // Metadata for SEO
 export const metadata = {
-  title: "mlola - AI-Powered Products for Business Growth | Intelligent Solutions",
-  description: "Transforming businesses with intelligent AI solutions. Discover Datafawn, Tubegrasp, Conversease, Denahku, and Grammarquick - cutting-edge AI software designed to solve real-world business challenges.",
-  keywords: "AI products, AI software, business AI solutions, AI SaaS, intelligent software, business automation, AI tools",
-  authors: [{ name: "mlola" }],
-  creator: "mlola",
-  publisher: "mlola",
+  title: "Mlola - AI Solutions & Business Automation | RAG, Private AI & Custom AI Integration",
+  description: "Transform your business with Mlola's AI solutions. We provide AI-powered business automation, RAG/Private RAG implementation, data analytics, and custom AI integration services for modern enterprises.",
+  keywords: "AI solutions, business automation, RAG, private RAG, AI integration, data analytics, business intelligence, AI consulting, custom AI development, private AI deployment",
+  authors: [{ name: "Mlola" }],
+  creator: "Mlola",
+  publisher: "Mlola",
   robots: "index, follow",
   openGraph: {
-    title: "mlola - AI-Powered Products for Business Growth",
-    description: "Transforming businesses with intelligent AI solutions. Cutting-edge AI software designed to solve real-world business challenges.",
+    title: "Mlola - AI Solutions & Business Automation",
+    description: "Transform your business with Mlola's AI solutions. RAG/Private RAG, business automation, and custom AI integration services.",
     url: "https://mlola.com",
-    siteName: "mlola",
+    siteName: "Mlola",
     images: [
       {
         url: "/images/mlola-og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "mlola - AI-Powered Products for Business Growth",
+        alt: "Mlola - AI Solutions & Business Automation",
       },
     ],
     locale: "en_US",
@@ -30,8 +42,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "mlola - AI-Powered Products for Business Growth",
-    description: "Transforming businesses with intelligent AI solutions. Cutting-edge AI software designed to solve real-world business challenges.",
+    title: "Mlola - AI Solutions & Business Automation",
+    description: "Transform your business with Mlola's AI solutions. RAG/Private RAG, business automation, and custom AI integration services.",
     images: ["/images/mlola-twitter-card.jpg"],
     creator: "@mlola",
   },
@@ -45,77 +57,47 @@ export const metadata = {
 };
 
 export default function Home() {
-  const products = [
+  const coreServices = [
     {
-      name: "Datafawn",
-      domain: "datafawn.com",
-      description: "Advanced data analytics and visualization platform that transforms raw data into actionable insights. Perfect for businesses looking to make data-driven decisions.",
-      problemSolution: "Datafawn leverages AI to uncover actionable insights from your data, helping you make smarter business decisions faster.",
-      image: "/product_logos/dataFawn.png",
-      features: ["AI Powered Data Analytics", "Predictive Analytics", "Machine Learning", "Data Visualization"],
-      category: "Data Analytics",
-      accent: "coral"
+      name: "Business Automation",
+      description: "Automate repetitive business processes using AI. Implement intelligent chatbots for customer service, create AI-powered data entry and document processing, and set up automated reporting and analytics.",
+      features: ["Intelligent Chatbots", "Document Processing", "Automated Reporting", "Process Optimization"],
+      targetClients: "SMEs, retail chains, service businesses"
     },
     {
-      name: "Tubegrasp",
-      domain: "tubegrasp.com", 
-      description: "Powerful video content management and analytics tool designed for content creators and marketers to optimize their video strategy.",
-      problemSolution: "Tubegrasp utilizes AI for efficient video content analysis, allowing you to extract key information and trends quickly.",
-      image: "/product_logos/tubegrasp.png",
-      features: ["YouTube Video Analytics", "AI Search", "AI Powered Knowledge Base"],
-      category: "Video Analytics",
-      accent: "coral"
+      name: "AI Integration & Implementation", 
+      description: "Help businesses adopt existing AI tools (ChatGPT, Claude, etc.). Integrate AI APIs into existing business systems, set up AI-powered workflows and processes, and train employees on AI tool usage.",
+      features: ["AI Tool Integration", "API Implementation", "Workflow Automation", "Employee Training"],
+      targetClients: "Traditional businesses wanting to modernize"
     },
     {
-      name: "Conversease",
-      domain: "conversease.com",
-      description: "AI-powered conversation platform that enhances customer communication and automates support workflows for businesses.",
-      problemSolution: "Conversease powers intelligent chatbots trained on your own data, delivering instant and accurate answers to customer inquiries or internal knowledge needs.",
-      image: "/product_logos/conversease.png", 
-      features: ["AI Chat Tool", "AI Chatbot", "AI Chat Assistant"],
-      category: "AI Communication",
-      accent: "coral"
+      name: "Data Analytics & Business Intelligence",
+      description: "Transform business data into actionable insights. Create automated dashboards and reports, implement predictive analytics for sales/inventory, and provide customer behavior analysis and recommendations.",
+      features: ["Automated Dashboards", "Predictive Analytics", "Customer Analysis", "Business Intelligence"],
+      targetClients: "Data-driven organizations"
     },
     {
-      name: "Denahku",
-      domain: "denahku.com",
-      description: "Comprehensive design and planning application for creating floor plans and 2D visualizations.",
-      problemSolution: "Denahku applies AI to streamline design workflows, making floor plan creation and visualization faster and more intuitive.",
-      image: "/product_logos/denahku.svg",
-      features: ["Floor Plan", "2D View", "Design"],
-      category: "Design Tools",
-      accent: "coral"
-    },
-    {
-      name: "Grammarquick",
-      domain: "grammarquick.com",
-      description: "Advanced grammar checking and writing enhancement tool powered by AI to improve writing quality and communication.",
-      problemSolution: "Grammarquick applies AI to enhance your written communication, ensuring clarity, accuracy, and impact.",
-      image: "/product_logos/grammarquick.avif",
-      features: ["Grammar Check", "Style Enhancement", "Real-time Suggestions"],
-      category: "Writing Tools",
-      accent: "coral"
+      name: "Private RAG Solutions",
+      description: "Deploy secure, private AI models on your infrastructure. Implement Retrieval-Augmented Generation (RAG) systems that work with your proprietary data without involving third-party services.",
+      features: ["Private Model Deployment", "Secure Data Processing", "Custom RAG Implementation", "On-Premise Solutions"],
+      targetClients: "Enterprise clients with security requirements"
     }
   ];
 
+
+
   const businessChallenges = [
     {
-      challenge: "Need faster customer support and reduced inquiry load?",
-      solution: "Conversease, our AI-powered chatbot, provides instant, accurate answers from your existing knowledge base.",
-      icon: Users,
-      accent: "orange"
+      challenge: "Need to automate repetitive business processes?",
+      solution: "Our AI-powered business automation solutions reduce manual work by up to 80% while improving accuracy and consistency."
     },
     {
-      challenge: "Struggling to extract insights from vast amounts of data?",
-      solution: "Datafawn helps you leverage machine learning to uncover critical patterns and make data-driven decisions.",
-      icon: TrendingUp,
-      accent: "coral"
+      challenge: "Want to implement AI without compromising data security?",
+      solution: "Our Private RAG solutions deploy AI models directly on your infrastructure, ensuring complete data privacy and control."
     },
     {
-      challenge: "Want to optimize video content performance?",
-      solution: "Tubegrasp analyzes your video content with AI to identify trends and optimization opportunities.",
-      icon: Building2,
-      accent: "multicolor"
+      challenge: "Struggling to extract insights from your business data?",
+      solution: "Our data analytics and BI services transform raw data into actionable insights with predictive capabilities."
     }
   ];
 
@@ -194,13 +176,12 @@ export default function Home() {
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "mlola AI Products",
-      "itemListElement": products.map((product, index) => ({
+      "name": "mlola AI Services",
+      "itemListElement": coreServices.map((service, index) => ({
         "@type": "Offer",
-        "name": product.name,
-        "description": product.description,
-        "url": `https://${product.domain}`,
-        "category": product.category,
+        "name": service.name,
+        "description": service.description,
+        "category": service.category,
         "position": index + 1
       }))
     }
@@ -216,12 +197,7 @@ export default function Home() {
         "name": "Home",
         "item": "https://mlola.com"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Products",
-        "item": "https://mlola.com#products"
-      }
+
     ]
   };
 
@@ -241,246 +217,223 @@ export default function Home() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <div className="min-h-screen bg-white">
         {/* Header */}
-        <header className="bg-white/95 backdrop-blur-xl border-b border-slate-200 sticky top-0 z-50 shadow-sm" role="banner">
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div className="flex items-center">
-                <Link href="/" className="text-3xl font-bold text-slate-900 hover:text-blue-600 transition-all duration-300 hover:scale-105" aria-label="mlola homepage">
-                  mlola
-                </Link>
+            <div className="flex justify-between items-center py-4">
+              <div className="flex items-center gap-3">
+                <img src="/mlola-logo.svg" alt="Mlola Logo" className="w-10 h-10" />
+                <span className="text-xl font-semibold text-slate-800">Mlola</span>
               </div>
-              <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
-                <a href="#products" className="text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium hover:scale-105" aria-label="View our AI products">Products</a>
-                <a href="#solutions" className="text-slate-600 hover:text-blue-600 transition-all duration-300 hover:scale-105" aria-label="See how we solve business challenges">Solutions</a>
-                <a href="#about" className="text-slate-600 hover:text-blue-600 transition-all duration-300 hover:scale-105" aria-label="Learn about mlola">About</a>
-                <a href="#contact" className="text-slate-600 hover:text-blue-600 transition-all duration-300 hover:scale-105" aria-label="Contact mlola">Contact</a>
+              
+              <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
+                <a href="#services" className="text-slate-600 hover:text-slate-900 font-medium text-sm">AI Solutions</a>
+                <a href="#about" className="text-slate-600 hover:text-slate-900 font-medium text-sm">About</a>
+                <a href="#contact" className="text-slate-600 hover:text-slate-900 font-medium text-sm">Contact</a>
               </nav>
+              
+              <div className="flex items-center gap-4">
+                <a 
+                  href="#contact" 
+                  className="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium text-sm hover:bg-blue-700"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
           </div>
         </header>
 
         {/* Hero Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" role="main">
-          {/* Background decoration */}
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-            <div className="absolute top-0 right-1/4 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
-            <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-4000"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto text-center relative">
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8 shadow-md border border-blue-100">
-                <Sparkles className="h-4 w-4" />
-                Innovative AI Products
-              </div>
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50" role="main">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="bg-white border border-gray-200 text-slate-700 px-6 py-3 rounded-full text-sm font-medium mb-8 inline-block">
+              AI Solutions & Business Automation
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold text-slate-900 mb-8 leading-tight">
-              AI-Powered Products
-              <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-600 bg-clip-text text-transparent">
-                for Business Growth
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
+              Transform Your Business with{' '}
+              <span className="text-blue-600">
+                Intelligent AI
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-              At mlola, we develop and deliver cutting-edge AI software designed to solve real-world business challenges. Explore our suite of intelligent solutions built to drive efficiency, innovation, and unlock new opportunities for your organization.
+            
+            <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Mlola delivers comprehensive AI solutions including business automation, data analytics, private RAG deployment, 
+              and custom AI integration. Deploy secure AI models on your infrastructure while maintaining complete data control.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a 
-                href="#products" 
-                className="group bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 hover:shadow-2xl transition-all duration-300 font-medium transform hover:scale-105 hover:-translate-y-1"
-                aria-label="Explore our AI solutions"
-              >
-                <span className="flex items-center gap-2">
-                  Explore Our Solutions
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-          </a>
-          <a
-                href="#contact" 
-                className="group border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-full hover:bg-slate-50 hover:border-blue-400 hover:text-blue-600 transition-all duration-300 font-medium hover:shadow-lg transform hover:scale-105"
-                aria-label="Request a demo of our products"
-              >
-                <span className="flex items-center gap-2">
-                  Request a Demo
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-          </a>
-        </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2">
+                Get AI Assessment
+              </button>
+              <button className="bg-white border border-gray-300 text-slate-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 flex items-center justify-center gap-2">
+                Explore Solutions
+              </button>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Business Automation</h3>
+                <p className="text-slate-600">Automate workflows and processes with intelligent AI solutions</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Private RAG</h3>
+                <p className="text-slate-600">Secure AI deployment on your infrastructure with complete data control</p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Custom AI Integration</h3>
+                <p className="text-slate-600">Tailored AI solutions that integrate seamlessly with your systems</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Products Section */}
-        <section id="products" className="py-24 px-4 sm:px-6 lg:px-8 bg-white" role="region" aria-labelledby="products-heading">
+        {/* Core Services Section */}
+        <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 bg-white" role="region" aria-labelledby="services-heading">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-slate-200">
-                <CheckCircle className="h-4 w-4" />
-                Innovative AI Products
+              <div className="bg-gray-100 text-slate-700 px-6 py-3 rounded-full text-sm font-medium mb-6 inline-block">
+                Core AI Services
               </div>
-              <h2 id="products-heading" className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">Our AI Solutions in Action</h2>
+              <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                Our <span className="text-blue-600">AI Solutions</span>
+              </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Discover our comprehensive suite of AI-powered software solutions designed to transform your business operations and drive sustainable growth.
+                Comprehensive AI services designed to transform your business operations, from automation to private AI deployment.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
-              {products.map((product, index) => {
-                const accentClasses = getAccentClasses(product.accent);
-                return (
-                  <article key={index} className="group relative h-full" role="listitem" itemScope itemType="https://schema.org/SoftwareApplication">
-                    <div className="relative bg-white border border-slate-200 rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 h-full flex flex-col">
-                      <div className="flex justify-center items-center h-48 bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
-                        <div className="relative w-28 h-28 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden transform group-hover:scale-110 transition-transform duration-500 border border-slate-100">
-                          <Image
-                            src={product.image}
-                            alt={`${product.name} logo`}
-                            width={80}
-                            height={80}
-                            className="object-contain p-3"
-                            itemProp="image"
-                          />
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" role="list">
+              {coreServices.map((service, index) => (
+                <article key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8 h-full flex flex-col" role="listitem">
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{service.name}</h3>
+                  </div>
+                  <p className="text-slate-600 mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="space-y-3 mb-6 flex-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-slate-600">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
                       </div>
-                      <div className="p-8 flex-1 flex flex-col">
-                        <div className="flex items-center justify-between mb-4">
-                          <h3 className="text-2xl font-bold text-slate-900" itemProp="name">{product.name}</h3>
-                          <span className={`${accentClasses.badge} text-sm px-3 py-1 rounded-full font-medium shadow-sm border ${accentClasses.border}`} itemProp="url">
-                            {product.domain}
-                          </span>
-                        </div>
-                        <p className="text-slate-600 mb-3 leading-relaxed" itemProp="description">
-                          {product.description}
-                        </p>
-                        <p className={`${accentClasses.text} mb-6 leading-relaxed text-sm font-medium ${accentClasses.bg} p-3 rounded-xl border ${accentClasses.border}`}>
-                          {product.problemSolution}
-                        </p>
-                        <div className="space-y-3 mb-8 flex-1" itemProp="featureList">
-                          {product.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center text-sm text-slate-600">
-                              <CheckCircle className={`h-4 w-4 ${accentClasses.text} mr-3 flex-shrink-0`} />
-                              {feature}
-                            </div>
-                          ))}
-                        </div>
-                        <div className="flex gap-3 mt-auto">
-                          <a 
-                            href={`https://${product.domain}`}
-          target="_blank"
-          rel="noopener noreferrer"
-                            className={`group flex-1 ${accentClasses.button} text-white text-center py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 font-medium transform hover:scale-105`}
-                            aria-label={`Visit ${product.name} website`}
-                            itemProp="url"
-                          >
-                            <span className="flex items-center justify-center gap-2">
-                              Visit Site
-                              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t border-gray-200 pt-4 mt-auto">
+                    <div className="text-sm text-slate-500">
+                      <span><strong>Target:</strong> {service.targetClients}</span>
                     </div>
-                  </article>
-                );
-              })}
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
+
+
         {/* Business Solutions Section */}
-        <section id="solutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50" role="region" aria-labelledby="solutions-heading">
+        <section id="solutions" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50" role="region" aria-labelledby="solutions-heading">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 bg-white text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm border border-slate-200">
-                <Building2 className="h-4 w-4" />
+              <div className="bg-white border border-gray-200 text-slate-700 px-6 py-3 rounded-full text-sm font-medium mb-6 inline-block">
                 Business Solutions
               </div>
-              <h2 id="solutions-heading" className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">Solving Your Business Challenges</h2>
+              <h2 id="solutions-heading" className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                Solving Your <span className="text-blue-600">Business Challenges</span>
+              </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Discover how mlola&apos;s AI products can transform your business by addressing specific operational challenges and driving measurable results.
+                Discover how Mlola&apos;s AI solutions can transform your business by addressing specific operational challenges and driving measurable results.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {businessChallenges.map((item, index) => {
-                const IconComponent = item.icon;
-                const accentClasses = getAccentClasses(item.accent);
-                return (
-                  <div key={index} className="group relative">
-                    <div className="relative bg-white border border-slate-200 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-                      <div className={`inline-flex items-center justify-center w-16 h-16 ${accentClasses.icon} rounded-full mb-6 shadow-lg border ${accentClasses.border}`}>
-                        <IconComponent className="h-8 w-8" />
-                      </div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-4">{item.challenge}</h3>
-                      <p className="text-slate-600 leading-relaxed mb-6">
-                        {item.solution}
-                      </p>
-                      <div className={`flex items-center ${accentClasses.text} font-medium group-hover:gap-2 transition-all duration-300`}>
-                        Learn more <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
+              {businessChallenges.map((item, index) => (
+                <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{item.challenge}</h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {item.solution}
+                  </p>
+                  <div className="text-blue-600 font-medium">
+                    Learn more
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
 
             <div className="text-center mt-16">
               <a 
                 href="#contact" 
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 hover:shadow-2xl transition-all duration-300 font-medium transform hover:scale-105 hover:-translate-y-1"
-                aria-label="Explore our AI products"
+                className="bg-blue-600 text-white px-12 py-4 rounded-lg hover:bg-blue-700 font-medium inline-block"
+                aria-label="Explore our AI solutions"
               >
-                Explore Our AI Products
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                Explore Our AI Solutions
               </a>
             </div>
           </div>
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden" role="region" aria-labelledby="about-heading">
-          {/* Background decoration */}
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-          </div>
-          
+        <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-white" role="region" aria-labelledby="about-heading">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-slate-200">
-                  <Sparkles className="h-4 w-4" />
-                  About mlola
+                <div className="bg-gray-100 text-slate-700 px-6 py-3 rounded-full text-sm font-medium mb-6 inline-block">
+                  About Mlola
                 </div>
-                <h2 id="about-heading" className="text-5xl md:text-6xl font-bold text-slate-900 mb-8">About mlola</h2>
+                <h2 id="about-heading" className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+                  About <span className="text-blue-600">Mlola</span>
+                </h2>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  mlola is an AI product company that develops practical SaaS solutions for businesses. We build software designed to help organizations work more efficiently and serve their customers better.
+                  Mlola is a comprehensive AI solutions company that specializes in business automation, data analytics, and private AI deployment. We help organizations transform their operations through intelligent automation while maintaining complete data security and control.
                 </p>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-                  Our team focuses on creating user-friendly AI tools that solve real problems. We&apos;re committed to building products that deliver genuine value to the businesses that use them.
+                  Our expertise spans from implementing RAG/Private RAG solutions on client infrastructure to developing custom AI integrations that modernize traditional business processes. We also create AI products that can work for client projects, demonstrating our capabilities across various industries.
                 </p>
                 <div className="grid grid-cols-2 gap-8 mb-8">
-                  <div className="text-center p-6 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">5</div>
-                    <div className="text-slate-600 font-medium">AI Products Built</div>
+                  <div className="text-center p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">4</div>
+                    <div className="text-slate-600 font-medium">Core AI Services</div>
                   </div>
-                  <div className="text-center p-6 bg-indigo-50 rounded-2xl border border-indigo-100 shadow-sm">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-teal-600 bg-clip-text text-transparent mb-2">more</div>
-                    <div className="text-slate-600 font-medium">to come</div>
+                  <div className="text-center p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">5</div>
+                    <div className="text-slate-600 font-medium">AI Products Built</div>
                   </div>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-teal-50 rounded-3xl p-12 text-center shadow-2xl border border-blue-100 transform hover:scale-105 transition-transform duration-500">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-8 shadow-lg">
-                    <Sparkles className="h-10 w-10 text-white" />
+                <div className="bg-white border border-gray-200 rounded-lg shadow-md p-12 text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-600 rounded-lg mb-8">
+                    <Shield className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-slate-900 mb-6">Building Practical AI Solutions</h3>
-                  <p className="text-slate-600 leading-relaxed text-lg">
-                    We focus on developing AI software that addresses real business needs. Our goal is to create tools that are both powerful and easy to use, helping organizations improve their operations and better serve their customers.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-6">Secure AI Solutions</h3>
+                  <p className="text-slate-600 leading-relaxed text-lg mb-8">
+                    We specialize in deploying AI models directly on client infrastructure, ensuring complete data privacy and security. Our Private RAG solutions enable businesses to leverage powerful AI capabilities without compromising sensitive information.
                   </p>
+                  
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center gap-2 text-slate-600">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span>100% Private</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>On-Premise</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Secure</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Scalable</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -488,95 +441,139 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden" role="region" aria-labelledby="contact-heading">
-          {/* Background decoration */}
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 left-1/3 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto text-center relative">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-8 border border-white/20">
-              <Sparkles className="h-4 w-4" />
+        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-100" role="region" aria-labelledby="contact-heading">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="bg-white text-slate-700 px-6 py-3 rounded-full text-sm font-medium mb-8 inline-block">
               Get Started
             </div>
-            <h2 id="contact-heading" className="text-5xl md:text-6xl font-bold mb-8">Ready to Discover the Power of AI?</h2>
-            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Have questions about how mlola&apos;s AI products can benefit your organization? Contact us to learn more or schedule a demo of our solutions.
+            <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+              Ready to Transform Your Business with <span className="text-blue-600">AI?</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Ready to implement AI solutions that drive real business results? Whether you need business automation, private RAG deployment, or custom AI integration, we&apos;re here to help you succeed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <a 
                 href="mailto:fikri.firdaus26@gmail.com" 
-                className="group bg-white text-slate-900 px-10 py-4 rounded-full hover:bg-slate-100 hover:shadow-2xl transition-all duration-300 font-medium transform hover:scale-105 hover:-translate-y-1"
-                aria-label="Contact us via email"
+                className="bg-blue-600 text-white px-12 py-4 rounded-lg hover:bg-blue-700 font-medium inline-block"
+                aria-label="Contact us for AI consultation"
               >
-                <span className="flex items-center gap-2">
-                  Contact Us
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </span>
+                Get AI Consultation
               </a>
+              
+              <a 
+                href="#services" 
+                className="bg-white border border-gray-300 text-slate-700 px-12 py-4 rounded-lg font-medium hover:bg-gray-50 inline-block"
+                aria-label="View our AI services"
+              >
+                View AI Services
+              </a>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2 text-slate-900">100% Private</h3>
+                <p className="text-slate-600 text-sm">Your data stays on your infrastructure</p>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Cog className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2 text-slate-900">Custom Integration</h3>
+                <p className="text-slate-600 text-sm">Tailored AI solutions for your business</p>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 text-center">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Database className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2 text-slate-900">Enterprise Ready</h3>
+                <p className="text-slate-600 text-sm">Scalable solutions for any business size</p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="bg-slate-900 text-slate-400 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800" role="contentinfo">
+        <footer className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-white text-2xl font-bold mb-4">mlola</h3>
-                <p className="text-sm mb-3 font-medium text-blue-400">
-                  Innovative AI Products
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+              <div className="md:col-span-2">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <Brain className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="text-2xl font-bold">Mlola</span>
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed max-w-md">
+                  Transforming businesses through intelligent AI solutions, secure private deployments, and comprehensive automation services.
                 </p>
-                <p className="text-sm leading-relaxed">
-                  Developing intelligent SaaS solutions for business growth.
-                </p>
+                <div className="flex gap-4">
+                  <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700" aria-label="Twitter">
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700" aria-label="LinkedIn">
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700" aria-label="GitHub">
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                </div>
               </div>
+              
               <div>
-                <h4 className="text-white font-semibold mb-6">Products</h4>
-                <nav role="navigation" aria-label="Product links">
-                  <ul className="space-y-3 text-sm">
-                    {products.slice(0, 4).map((product, index) => (
-                      <li key={index}>
-                        <a 
-                          href={`https://${product.domain}`} 
-                          className="hover:text-white transition-colors flex items-center gap-2 group"
-                          aria-label={`Visit ${product.name} website`}
-                        >
-                          <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
-                          {product.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
+                <h3 className="text-lg font-semibold mb-6">AI Solutions</h3>
+                <ul className="space-y-4">
+                  <li><a href="#services" className="text-slate-300 hover:text-white">
+                    Business Automation
+                  </a></li>
+                  <li><a href="#services" className="text-slate-300 hover:text-white">
+                    AI Integration
+                  </a></li>
+                  <li><a href="#services" className="text-slate-300 hover:text-white">
+                    Data Analytics
+                  </a></li>
+                  <li><a href="#services" className="text-slate-300 hover:text-white">
+                    Private RAG
+                  </a></li>
+                </ul>
               </div>
+              
               <div>
-                <h4 className="text-white font-semibold mb-6">Company</h4>
-                <nav role="navigation" aria-label="Company links">
-                  <ul className="space-y-3 text-sm">
-                    <li><a href="#about" className="hover:text-white transition-colors flex items-center gap-2 group"><ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />About</a></li>
-                    <li><a href="#products" className="hover:text-white transition-colors flex items-center gap-2 group"><ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />Products</a></li>
-                    <li><a href="#solutions" className="hover:text-white transition-colors flex items-center gap-2 group"><ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />Solutions</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div>
-                <h4 className="text-white font-semibold mb-6">Connect</h4>
-                <nav role="navigation" aria-label="Contact links">
-                  <ul className="space-y-3 text-sm">
-                    <li><a href="mailto:fikri.firdaus26@gmail.com" className="hover:text-white transition-colors flex items-center gap-2 group"><ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />Contact</a></li>
-                    <li><a href="#contact" className="hover:text-white transition-colors flex items-center gap-2 group"><ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />Demo Request</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors flex items-center gap-2 group"><ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />Support</a></li>
-                  </ul>
-                </nav>
+                <h3 className="text-lg font-semibold mb-6">Company</h3>
+                <ul className="space-y-4">
+                  <li><a href="#about" className="text-slate-300 hover:text-white">
+                    About
+                  </a></li>
+                  <li><a href="#contact" className="text-slate-300 hover:text-white">
+                    Contact
+                  </a></li>
+                  <li><a href="#" className="text-slate-300 hover:text-white">
+                    Case Studies
+                  </a></li>
+                  <li><a href="#" className="text-slate-300 hover:text-white">
+                    Privacy Policy
+                  </a></li>
+                  <li><a href="#" className="text-slate-300 hover:text-white">
+                    Terms of Service
+                  </a></li>
+                </ul>
               </div>
             </div>
-            <div className="mt-12 pt-8 border-t border-slate-800 text-center text-sm">
-              <p>&copy; 2024 mlola. All rights reserved.</p>
+            
+            <div className="border-t border-slate-700 mt-12 pt-8 text-center">
+              <div className="text-slate-400">
+                © 2024 <span className="font-medium">Mlola</span>. All rights reserved. 
+                <span className="hidden sm:inline">Secure AI Solutions & Business Automation.</span>
+              </div>
             </div>
           </div>
-      </footer>
+        </footer>
     </div>
     </>
   );
