@@ -289,7 +289,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Business Automation</h3>
-                <p className="text-slate-600">Automate workflows and processes with intelligent AI solutions</p>
+                <p className="text-slate-600">Automate workflows and processes with AI solutions</p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
@@ -522,7 +522,7 @@ export default function Home() {
                   <span className="text-2xl font-bold">Mlola</span>
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed max-w-md">
-                  Transforming businesses through intelligent AI solutions, secure private deployments, and comprehensive automation services.
+                  Transforming businesses through AI solutions, secure private deployments, and comprehensive automation services.
                 </p>
               </div>
               
