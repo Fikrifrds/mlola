@@ -12,47 +12,47 @@ import {
   Calendar, 
   Cog, 
   Database,
-  Shield
+  Shield,
+  MapPin
 } from 'lucide-react'
 
 // Metadata for SEO
 export const metadata = {
   title: "Mlola - AI Solutions & Business Automation | RAG, Private AI & Custom AI Integration",
   description: "Transform your business with Mlola's AI solutions. We provide AI-powered business automation, RAG/Private RAG implementation, data analytics, and custom AI integration services for modern enterprises.",
-  keywords: "AI solutions, business automation, RAG, private RAG, AI integration, data analytics, business intelligence, AI consulting, custom AI development, private AI deployment",
-  authors: [{ name: "Mlola" }],
-  creator: "Mlola",
-  publisher: "Mlola",
-  robots: "index, follow",
+  keywords: 'AI solutions, business automation, private RAG, AI integration, data analytics, secure AI deployment, custom AI development',
   openGraph: {
-    title: "Mlola - AI Solutions & Business Automation",
-    description: "Transform your business with Mlola's AI solutions. RAG/Private RAG, business automation, and custom AI integration services.",
-    url: "https://mlola.com",
-    siteName: "Mlola",
+    title: 'Mlola - AI Solutions & Business Automation',
+    description: 'Transform your business with AI solutions, private RAG deployment, and custom integration. Deploy secure AI models on your infrastructure while maintaining complete data privacy.',
+    url: 'https://mlola.com',
+    siteName: 'Mlola',
     images: [
       {
-        url: "/images/mlola-og-image.jpg",
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "Mlola - AI Solutions & Business Automation",
+        alt: 'Mlola - AI Solutions & Business Automation',
       },
     ],
-    locale: "en_US",
-    type: "website",
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Mlola - AI Solutions & Business Automation",
-    description: "Transform your business with Mlola's AI solutions. RAG/Private RAG, business automation, and custom AI integration services.",
-    images: ["/images/mlola-twitter-card.jpg"],
-    creator: "@mlola",
+    card: 'summary_large_image',
+    title: 'Mlola - AI Solutions & Business Automation',
+    description: 'Transform your business with AI solutions, private RAG deployment, and custom integration. Deploy secure AI models on your infrastructure while maintaining complete data privacy.',
+    images: ['/og-image.jpg'],
   },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-  },
-  alternates: {
-    canonical: "https://mlola.com",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -252,12 +252,9 @@ export default function Home() {
               AI Solutions & Business Automation
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
-              Transform Your Business with{' '}
-              <span className="text-blue-600">
-                Intelligent AI
-              </span>
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
+                Transform Your Business with <span className="text-blue-600">AI</span>
+              </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
               Mlola delivers comprehensive AI solutions including business automation, data analytics, private RAG deployment, 
@@ -265,12 +262,18 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2">
-                Get AI Assessment
-              </button>
-              <button className="bg-white border border-gray-300 text-slate-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 flex items-center justify-center gap-2">
+              <a 
+                href="#contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="#services" 
+                className="bg-white border border-gray-300 text-slate-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 flex items-center justify-center gap-2"
+              >
                 Explore Solutions
-              </button>
+              </a>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -505,25 +508,12 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               <div className="md:col-span-2">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Brain className="h-6 w-6 text-white" />
-                  </div>
+                  <img src="/mlola-logo.svg" alt="Mlola Logo" className="w-10 h-10" />
                   <span className="text-2xl font-bold">Mlola</span>
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed max-w-md">
                   Transforming businesses through intelligent AI solutions, secure private deployments, and comprehensive automation services.
                 </p>
-                <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700" aria-label="Twitter">
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700" aria-label="LinkedIn">
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700" aria-label="GitHub">
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                </div>
               </div>
               
               <div>
@@ -556,12 +546,6 @@ export default function Home() {
                   <li><a href="#" className="text-slate-300 hover:text-white">
                     Case Studies
                   </a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white">
-                    Privacy Policy
-                  </a></li>
-                  <li><a href="#" className="text-slate-300 hover:text-white">
-                    Terms of Service
-                  </a></li>
                 </ul>
               </div>
             </div>
@@ -570,6 +554,10 @@ export default function Home() {
               <div className="text-slate-400">
                 © 2024 <span className="font-medium">Mlola</span>. All rights reserved. 
                 <span className="hidden sm:inline">Secure AI Solutions & Business Automation.</span>
+              </div>
+              <div className="text-slate-500 text-sm mt-2 flex items-center justify-center">
+                <MapPin className="inline-block w-4 h-4 mr-1" />
+                <span>Sidoarjo, Indonesia</span>
               </div>
             </div>
           </div>
