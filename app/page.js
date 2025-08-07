@@ -18,86 +18,105 @@ function HomePage() {
   const coreServices = t('coreServices');
   const businessChallenges = t('businessChallenges');
 
-  // Structured Data (JSON-LD) for SEO - Language aware
+  // Structured Data (JSON-LD) for SEO - Indonesia focused
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "TechnologyCompany"],
     "name": "Mlola Indonesia",
-    "alternateName": ["Mlola", "Mlola AI", "Mlola AI Indonesia"],
-    "description": language === 'id' 
-      ? "Penyedia solusi AI dan otomasi bisnis di Indonesia yang fokus membantu perusahaan mengimplementasikan teknologi AI dengan pendekatan praktis. Melayani Jakarta, Surabaya, Bandung, Medan, Semarang, dan kota besar Indonesia."
-      : "AI and business automation solutions provider in Indonesia focused on helping companies implement AI technology with practical approaches. Serving Jakarta, Surabaya, Bandung, Medan, Semarang, and major Indonesian cities.",
+    "alternateName": ["Mlola", "Mlola AI Indonesia"],
+    "description": "Penyedia solusi AI dan otomasi bisnis terpercaya di Indonesia. Spesialisasi RAG system, integrasi ChatGPT, otomasi bisnis, dan analisis data untuk perusahaan Indonesia.",
     "url": "https://mlola.com",
-    "logo": "https://mlola.com/images/mlola-logo.png",
+    "logo": "https://mlola.com/mlola-logo.svg",
     "image": "https://mlola.com/og-image.jpg",
     "foundingDate": "2024",
     "foundingLocation": {
       "@type": "Place",
-      "name": "Sidoarjo, Indonesia",
+      "name": "Sidoarjo, Jawa Timur, Indonesia",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Sidoarjo",
         "addressRegion": "Jawa Timur",
-        "addressCountry": "Indonesia"
+        "addressCountry": "ID"
       }
     },
-    "areaServed": [
-      {
-        "@type": "Country",
-        "name": "Indonesia"
-      },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Indonesia"
+    },
+    "serviceArea": [
       {
         "@type": "City",
-        "name": "Jakarta"
+        "name": "Jakarta",
+        "addressCountry": "ID"
       },
       {
         "@type": "City", 
-        "name": "Surabaya"
+        "name": "Surabaya",
+        "addressCountry": "ID"
       },
       {
         "@type": "City",
-        "name": "Bandung"
+        "name": "Bandung",
+        "addressCountry": "ID"
       },
       {
         "@type": "City",
-        "name": "Medan"
+        "name": "Medan",
+        "addressCountry": "ID"
       },
       {
         "@type": "City",
-        "name": "Semarang"
+        "name": "Yogyakarta", 
+        "addressCountry": "ID"
       }
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "",
-      "contactType": "customer service",
+      "contactType": "customer support",
       "email": "fikri.firdaus26@gmail.com",
-      "availableLanguage": ["Indonesian", "English"],
-      "areaServed": "Indonesia"
+      "availableLanguage": ["id", "en"],
+      "areaServed": "ID"
     },
-    "sameAs": [
-      "https://twitter.com/mlola_indonesia",
-      "https://linkedin.com/company/mlola-indonesia",
-      "https://github.com/mlola"
-    ],
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Machine Learning", 
-      "Business Automation",
-      "RAG Implementation",
-      "Data Analytics",
-      "AI Integration",
-      "On-Premise AI Deployment",
-      "Custom AI Development"
-    ],
-    "serviceType": [
-      "AI Solutions",
-      "Business Automation", 
-      "Data Analytics",
-      "AI Integration",
-      "RAG Implementation",
-      "On-Premise AI Deployment"
-    ]
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Layanan AI Indonesia",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "RAG System Indonesia",
+            "description": "Sistem knowledge base berbasis AI untuk dokumen perusahaan"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Otomasi Bisnis AI",
+            "description": "Solusi otomasi proses bisnis menggunakan teknologi AI"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Integrasi ChatGPT",
+            "description": "Integrasi AI tools seperti ChatGPT ke sistem perusahaan"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Analisis Data AI",
+            "description": "Business intelligence dan prediksi menggunakan AI"
+          }
+        }
+      ]
+    },
+    "keywords": "solusi AI Indonesia, RAG system Indonesia, ChatGPT integration, otomasi bisnis, AI consultant Jakarta, business automation Indonesia",
+    "inLanguage": "id"
   };
 
   return (
