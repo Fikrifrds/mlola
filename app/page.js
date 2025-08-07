@@ -218,9 +218,11 @@ function HomePage() {
                 const isRAGService = service.name === t('coreServices')[3]?.name;
                 const isDataAnalyticsService = service.name === t('coreServices')[2]?.name;
                 const isAIIntegrationService = service.name === t('coreServices')[1]?.name;
+                const isBusinessAutomationService = service.name === t('coreServices')[0]?.name;
                 const ragLink = '/solutions/rag-system';
                 const analyticsLink = '/solutions/analisis-data';
                 const integrationLink = '/solutions/integrasi-ai';
+                const automationLink = '/solutions/otomasi-bisnis';
                 
                 return (
                   <article key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8 h-full flex flex-col" role="listitem">
@@ -238,6 +240,17 @@ function HomePage() {
                         </div>
                       ))}
                     </div>
+                    {isBusinessAutomationService && (
+                      <div className="mt-4 pt-4 border-t border-gray-200">
+                        <Link 
+                          href={automationLink} 
+                          className="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center gap-1 text-sm"
+                        >
+                          {language === 'id' ? 'Lihat Detail Otomasi Bisnis' : 'View Business Automation Details'}
+                          <span className="ml-1">→</span>
+                        </Link>
+                      </div>
+                    )}
                     {isRAGService && (
                       <div className="mt-4 pt-4 border-t border-gray-200">
                         <Link 

@@ -151,6 +151,9 @@ function DataAnalysisSolutionPage() {
                   <p className="text-sm text-slate-600 mt-2">
                     {language === 'id' ? 'prediksi bisnis' : 'business predictions'}
                   </p>
+                  <p className="text-xs text-slate-500 mt-2 italic">
+                    {language === 'id' ? '*akurasi tergantung kualitas dataset' : '*accuracy depends on dataset quality'}
+                  </p>
                 </div>
               </div>
             </div>

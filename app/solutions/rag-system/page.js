@@ -112,32 +112,6 @@ function RAGSystemPage() {
     }
   ];
 
-  const technicalSpecs = [
-    {
-      feature: language === 'id' ? 'Supported Formats' : 'Supported Formats',
-      value: 'PDF, DOCX, XLSX, PPTX, TXT, CSV'
-    },
-    {
-      feature: language === 'id' ? 'Response Time' : 'Response Time',
-      value: language === 'id' ? '< 3 detik' : '< 3 seconds'
-    },
-    {
-      feature: language === 'id' ? 'Document Limit' : 'Document Limit',
-      value: language === 'id' ? 'Tidak terbatas' : 'Unlimited'
-    },
-    {
-      feature: language === 'id' ? 'Concurrent Users' : 'Concurrent Users',
-      value: language === 'id' ? '100+ pengguna' : '100+ users'
-    },
-    {
-      feature: language === 'id' ? 'Languages' : 'Languages',
-      value: language === 'id' ? 'Indonesia, English, 50+ bahasa' : 'Indonesian, English, 50+ languages'
-    },
-    {
-      feature: language === 'id' ? 'Integration' : 'Integration',
-      value: 'REST API, Slack, Teams, WhatsApp'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -183,10 +157,10 @@ function RAGSystemPage() {
                   {language === 'id' ? 'Demo RAG System' : 'RAG System Demo'}
                 </a>
                 <a 
-                  href="#specs" 
+                  href="mailto:fikri.firdaus26@gmail.com" 
                   className="bg-white border border-orange-200 text-orange-700 px-8 py-3 rounded-lg font-medium hover:bg-orange-50 inline-block text-center"
                 >
-                  {language === 'id' ? 'Lihat Spesifikasi' : 'View Specifications'}
+                  {language === 'id' ? 'Diskusi Kebutuhan' : 'Discuss Requirements'}
                 </a>
               </div>
             </div>
@@ -210,7 +184,7 @@ function RAGSystemPage() {
                     <div className="bg-orange-50 rounded-lg p-3 flex-1">
                       <p className="text-sm text-slate-700">
                         {language === 'id' 
-                          ? 'Berdasarkan Employee Handbook hal. 23, prosedur cuti tahuuan adalah: 1) Ajukan permohonan minimal 2 minggu sebelumnya...'
+                          ? 'Berdasarkan Employee Handbook hal. 23, prosedur cuti tahunan adalah: 1) Ajukan permohonan minimal 2 minggu sebelumnya...'
                           : 'Based on Employee Handbook page 23, annual leave procedure is: 1) Submit request at least 2 weeks in advance...'
                         }
                       </p>
@@ -348,30 +322,77 @@ function RAGSystemPage() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section id="specs" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      {/* Supported Capabilities Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              {language === 'id' ? 'Spesifikasi Teknis' : 'Technical Specifications'}
+              {language === 'id' ? 'Yang Dapat Diproses RAG System' : 'What RAG System Can Process'}
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               {language === 'id' 
-                ? 'Spesifikasi lengkap sistem RAG untuk kebutuhan enterprise'
-                : 'Complete RAG system specifications for enterprise needs'
+                ? 'Berbagai jenis dokumen dan data yang umum digunakan untuk knowledge base perusahaan'
+                : 'Various document types and data commonly used for company knowledge bases'
               }
             </p>
           </div>
 
           <div className="bg-white rounded-lg shadow-md border border-gray-200 p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {technicalSpecs.map((spec, index) => (
-                <div key={index} className="text-center">
-                  <h3 className="text-sm font-semibold text-slate-500 uppercase mb-2">{spec.feature}</h3>
-                  <p className="text-lg font-bold text-slate-900">{spec.value}</p>
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-slate-500 uppercase mb-2">
+                  {language === 'id' ? 'Format Dokumen' : 'Document Formats'}
+                </h3>
+                <div className="space-y-1">
+                  {['PDF', 'Microsoft Word (.docx)', 'Excel (.xlsx)', 'PowerPoint (.pptx)', 'Plain Text (.txt)', 'CSV'].map((format, index) => (
+                    <p key={index} className="text-sm text-slate-900 font-medium">{format}</p>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-slate-500 uppercase mb-2">
+                  {language === 'id' ? 'Bahasa yang Didukung' : 'Supported Languages'}
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    language === 'id' ? 'Bahasa Indonesia' : 'Indonesian',
+                    'English',
+                    language === 'id' ? 'Lainnya' : 'Others'
+                  ].map((lang, index) => (
+                    <p key={index} className="text-sm text-slate-900 font-medium">{lang}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-slate-500 uppercase mb-2">
+                  {language === 'id' ? 'Jenis Data Internal' : 'Internal Data Types'}
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    language === 'id' ? 'Employee Handbook' : 'Employee Handbook',
+                    language === 'id' ? 'SOP & Prosedur' : 'SOPs & Procedures', 
+                    language === 'id' ? 'Dokumentasi Teknis' : 'Technical Documentation',
+                    language === 'id' ? 'Knowledge Base' : 'Knowledge Base',
+                    language === 'id' ? 'FAQ Internal' : 'Internal FAQs',
+                    language === 'id' ? 'Training Materials' : 'Training Materials',
+                    language === 'id' ? 'Lainnya' : 'Others'
+                  ].map((type, index) => (
+                    <p key={index} className="text-sm text-slate-900 font-medium">{type}</p>
+                  ))}
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className="mt-8 bg-orange-50 border border-orange-200 rounded-lg p-6">
+            <p className="text-sm text-orange-800 text-center">
+              {language === 'id' 
+                ? '💡 Kemampuan spesifik dapat bervariasi tergantung kompleksitas dokumen dan kebutuhan implementasi'
+                : '💡 Specific capabilities may vary depending on document complexity and implementation requirements'
+              }
+            </p>
           </div>
         </div>
       </section>

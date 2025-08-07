@@ -121,13 +121,13 @@ function AutomationSolutionPage() {
                     <Clock className="h-8 w-8 text-blue-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-slate-900">
-                    {language === 'id' ? 'Hemat Waktu Hingga' : 'Save Up To'}
+                    {language === 'id' ? 'Efisiensi Operasional' : 'Operational Efficiency'}
                   </h3>
                   <p className="text-3xl font-bold text-blue-600 mt-2">
-                    {language === 'id' ? '5 Jam/Hari' : '5 Hours/Day'}
+                    {language === 'id' ? 'Bervariasi' : 'Varies'}
                   </p>
                   <p className="text-sm text-slate-600 mt-2">
-                    {language === 'id' ? 'untuk tugas administratif' : 'on administrative tasks'}
+                    {language === 'id' ? 'tergantung kompleksitas proses' : 'depends on process complexity'}
                   </p>
                 </div>
               </div>
