@@ -555,8 +555,7 @@ export default function Home() {
             
             <div className="border-t border-slate-700 mt-12 pt-8 text-center">
               <div className="text-slate-400">
-                © 2024 <span className="font-medium">Mlola</span>. All rights reserved. 
-                <span className="hidden sm:inline">Secure AI Solutions & Business Automation.</span>
+                © 2024 <span className="font-medium">Mlola</span>. All rights reserved.
               </div>
               <div className="text-slate-500 text-sm mt-2 flex items-center justify-center">
                 <MapPin className="inline-block w-4 h-4 mr-1" />
