@@ -54,6 +54,10 @@ const translations = {
       {
         challenge: "Memiliki banyak data namun kesulitan dalam menganalisisnya?",
         solution: "Kami membantu mengubah data mentah menjadi insight yang berguna untuk bisnis. Pendekatan kami disesuaikan dengan kebutuhan spesifik perusahaan Anda untuk hasil yang lebih relevan."
+      },
+      {
+        challenge: "Karyawan sering kesulitan mencari informasi dalam dokumen perusahaan?",
+        solution: "Sistem RAG kami mengubah dokumen perusahaan menjadi knowledge base yang dapat dichat. Karyawan dapat bertanya tentang kebijakan, prosedur, atau data internal dan mendapat jawaban akurat dalam hitungan detik."
       }
     ],
     coreServices: [
@@ -191,6 +195,10 @@ const translations = {
       {
         challenge: "Have extensive data but struggling with analysis?",
         solution: "We help transform raw data into actionable business insights. Our approach is customized to your company's specific requirements to ensure more relevant and valuable outcomes."
+      },
+      {
+        challenge: "Employees often struggle to find information in company documents?",
+        solution: "Our RAG system transforms company documents into a chateable knowledge base. Employees can ask about policies, procedures, or internal data and get accurate answers in seconds."
       }
     ],
     coreServices: [

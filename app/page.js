@@ -214,24 +214,66 @@ function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8" role="list">
-              {coreServices && coreServices.map((service, index) => (
-                <article key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8 h-full flex flex-col" role="listitem">
-                  <div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{service.name}</h3>
-                  </div>
-                  <p className="text-slate-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="space-y-3 mb-6 flex-1">
-                    {service.features && service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-slate-600">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
-                        {feature}
+              {coreServices && coreServices.map((service, index) => {
+                const isRAGService = service.name === t('coreServices')[3]?.name;
+                const isDataAnalyticsService = service.name === t('coreServices')[2]?.name;
+                const isAIIntegrationService = service.name === t('coreServices')[1]?.name;
+                const ragLink = '/solutions/rag-system';
+                const analyticsLink = '/solutions/analisis-data';
+                const integrationLink = '/solutions/integrasi-ai';
+                
+                return (
+                  <article key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8 h-full flex flex-col" role="listitem">
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">{service.name}</h3>
+                    </div>
+                    <p className="text-slate-600 mb-4 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <div className="space-y-3 mb-6 flex-1">
+                      {service.features && service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-slate-600">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    {isRAGService && (
+                      <div className="mt-4 pt-4 border-t border-gray-200">
+                        <Link 
+                          href={ragLink} 
+                          className="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center gap-1 text-sm"
+                        >
+                          {language === 'id' ? 'Lihat Detail RAG System' : 'View RAG System Details'}
+                          <span className="ml-1">→</span>
+                        </Link>
                       </div>
-                    ))}
-                  </div>
-                </article>
-              ))}
+                    )}
+                    {isDataAnalyticsService && (
+                      <div className="mt-4 pt-4 border-t border-gray-200">
+                        <Link 
+                          href={analyticsLink} 
+                          className="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center gap-1 text-sm"
+                        >
+                          {language === 'id' ? 'Lihat Detail Analisis Data' : 'View Data Analytics Details'}
+                          <span className="ml-1">→</span>
+                        </Link>
+                      </div>
+                    )}
+                    {isAIIntegrationService && (
+                      <div className="mt-4 pt-4 border-t border-gray-200">
+                        <Link 
+                          href={integrationLink} 
+                          className="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center gap-1 text-sm"
+                        >
+                          {language === 'id' ? 'Lihat Detail Integrasi AI' : 'View AI Integration Details'}
+                          <span className="ml-1">→</span>
+                        </Link>
+                      </div>
+                    )}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -251,18 +293,31 @@ function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {businessChallenges && businessChallenges.map((item, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">{item.challenge}</h3>
-                  <p className="text-slate-600 leading-relaxed mb-6">
-                    {item.solution}
-                  </p>
-                  <div className="text-blue-600 font-medium">
-                    {t('solutions.learnMore')}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {businessChallenges && businessChallenges.map((item, index) => {
+                const solutionPaths = [
+                  '/solutions/otomasi-bisnis',
+                  '/solutions/keamanan-data', 
+                  '/solutions/analisis-data',
+                  '/solutions/rag-system'
+                ];
+                
+                return (
+                  <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-md p-8">
+                    <h3 className="text-xl font-bold text-slate-900 mb-4">{item.challenge}</h3>
+                    <p className="text-slate-600 leading-relaxed mb-6">
+                      {item.solution}
+                    </p>
+                    <Link 
+                      href={solutionPaths[index] || '#'} 
+                      className="text-blue-600 font-medium hover:text-blue-700 inline-flex items-center gap-1"
+                    >
+                      {t('solutions.learnMore')}
+                      <span className="ml-1">→</span>
+                    </Link>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="text-center mt-16">
