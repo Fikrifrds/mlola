@@ -16,58 +16,86 @@ import {
   MapPin
 } from 'lucide-react'
 
-// Metadata for SEO
+// Metadata for SEO - Optimized for Indonesia
 export const metadata = {
-  title: "Mlola - AI Solutions & Business Automation | RAG, Private AI & Custom AI Integration",
-  description: "Transform your business with Mlola's AI solutions. We provide AI-powered business automation, RAG/Private RAG implementation, data analytics, and custom AI integration services for modern enterprises.",
-  keywords: 'AI solutions, business automation, private RAG, AI integration, data analytics, secure AI deployment, custom AI development',
+  title: "Mlola - Solusi AI & Otomasi Bisnis Indonesia | RAG, Private AI & Integrasi AI Custom",
+  description: "Transformasi bisnis Anda dengan solusi AI Mlola Indonesia. Kami menyediakan otomasi bisnis bertenaga AI, implementasi RAG/Private RAG, analitik data, dan layanan integrasi AI custom untuk perusahaan modern di Indonesia.",
+  keywords: 'solusi AI Indonesia, otomasi bisnis AI, private RAG Indonesia, integrasi AI, analitik data, deployment AI aman, pengembangan AI custom, AI solutions Indonesia, business automation Indonesia, RAG implementation Indonesia, data analytics Indonesia, AI integration services Indonesia, machine learning Indonesia, artificial intelligence Indonesia, teknologi AI Indonesia, konsultan AI Indonesia, jasa AI Indonesia',
+  authors: [{ name: 'Mlola Indonesia' }],
+  creator: 'Mlola Indonesia',
+  publisher: 'Mlola Indonesia',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://mlola.com'),
+  alternates: {
+    canonical: 'https://mlola.com',
+    languages: {
+      'id-ID': 'https://mlola.com/id',
+      'en-US': 'https://mlola.com/en',
+    },
+  },
   openGraph: {
-    title: 'Mlola - AI Solutions & Business Automation',
-    description: 'Transform your business with AI solutions, flexible deployment options, and custom integration. Choose on-premise deployment for control or cost-effective third-party APIs.',
+    title: 'Mlola - Solusi AI & Otomasi Bisnis Terdepan di Indonesia',
+    description: 'Transformasi bisnis Anda dengan solusi AI terdepan di Indonesia. Pilih private deployment (deploy model sendiri) untuk kontrol maksimal atau API third-party yang cost-effective. Melayani seluruh Indonesia termasuk Jakarta, Surabaya, Bandung, Medan, Semarang.',
     url: 'https://mlola.com',
-    siteName: 'Mlola',
+    siteName: 'Mlola Indonesia',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mlola - AI Solutions & Business Automation',
+        alt: 'Mlola - Solusi AI & Otomasi Bisnis Indonesia',
       },
     ],
-    locale: 'en_US',
+    locale: 'id_ID',
     type: 'website',
+    countryName: 'Indonesia',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mlola - AI Solutions & Business Automation',
-    description: 'Transform your business with AI solutions, flexible deployment options, and custom integration. Choose on-premise deployment for control or cost-effective third-party APIs.',
+    title: 'Mlola - Solusi AI & Otomasi Bisnis Indonesia',
+    description: 'Transformasi bisnis Anda dengan solusi AI terdepan di Indonesia. Private deployment untuk kontrol maksimal atau API cost-effective. Melayani Jakarta, Surabaya, Bandung, dan seluruh Indonesia.',
     images: ['/og-image.jpg'],
+    creator: '@mlola_indonesia',
+    site: '@mlola_indonesia',
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
+  category: 'technology',
+  classification: 'AI Solutions, Business Automation, Technology Services',
 };
 
 export default function Home() {
   const coreServices = [
     {
       name: "Business Automation",
-      description: "Automate repetitive business processes using AI. Implement intelligent chatbots for customer service, create AI-powered data entry and document processing, and set up automated reporting and analytics.",
-      features: ["Intelligent Chatbots", "Document Processing", "Automated Reporting", "Process Optimization"],
+      description: "Automate repetitive business processes using AI. Create AI-powered data entry and document processing, set up automated reporting and analytics, and streamline workflow management.",
+      features: ["Document Processing", "Automated Reporting", "Process Optimization", "Workflow Management"],
       targetClients: "SMEs, retail chains, service businesses"
     },
     {
       name: "AI Integration & Implementation", 
-      description: "Help businesses adopt existing AI tools (ChatGPT, Claude, etc.). Integrate AI APIs into existing business systems, set up AI-powered workflows and processes, and train employees on AI tool usage.",
-      features: ["AI Tool Integration", "API Implementation", "Workflow Automation", "Employee Training"],
+      description: "Help businesses adopt existing AI tools (ChatGPT, Claude, etc.). Integrate AI APIs into existing business systems, implement intelligent chatbots for customer service, and set up AI-powered workflows and processes.",
+      features: ["Intelligent Chatbots", "AI Tool Integration", "API Implementation", "Workflow Automation"],
       targetClients: "Traditional businesses wanting to modernize"
     },
     {
@@ -77,10 +105,10 @@ export default function Home() {
       targetClients: "Data-driven organizations"
     },
     {
-      name: "Private RAG Solutions",
-      description: "Deploy secure, private AI models on your infrastructure. Implement Retrieval-Augmented Generation (RAG) systems that work with your proprietary data without involving third-party services.",
-      features: ["Private Model Deployment", "Secure Data Processing", "Custom RAG Implementation", "On-Premise Solutions"],
-      targetClients: "Enterprise clients with security requirements"
+      name: "RAG Solutions",
+      description: "Flexible Retrieval-Augmented Generation (RAG) systems tailored to your needs. Choose from private deployment (deploy models yourself on your own infrastructure) or cloud-based solutions for cost-effectiveness.",
+      features: ["Private Knowledge Bases", "Document Q&A Systems", "Flexible Deployment (Private or Cloud)", "Custom RAG Implementation"],
+      targetClients: "Businesses seeking intelligent document processing"
     }
   ];
 
@@ -93,7 +121,7 @@ export default function Home() {
     },
     {
       challenge: "Want to implement AI without compromising data security?",
-      solution: "Choose from our flexible AI deployment options: Private RAG on your infrastructure for enhanced control, or cost-effective third-party API integrations."
+      solution: "Choose from our flexible AI deployment options: Private RAG (deploy models yourself on your infrastructure) for enhanced control, or cost-effective third-party API integrations."
     },
     {
       challenge: "Struggling to extract insights from your business data?",
@@ -155,34 +183,95 @@ export default function Home() {
     return accentMap[accent] || accentMap.coral;
   };
 
-  // Structured Data (JSON-LD) for SEO
+  // Structured Data (JSON-LD) for SEO - Indonesia Focused
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "mlola",
-    "description": "AI product company developing intelligent SaaS solutions for business growth and efficiency",
+    "name": "Mlola Indonesia",
+    "alternateName": ["Mlola", "Mlola AI", "Mlola AI Indonesia"],
+    "description": "Perusahaan solusi AI terdepan di Indonesia yang mengembangkan solusi SaaS cerdas untuk pertumbuhan dan efisiensi bisnis. Melayani Jakarta, Surabaya, Bandung, Medan, Semarang, dan seluruh Indonesia.",
     "url": "https://mlola.com",
     "logo": "https://mlola.com/images/mlola-logo.png",
+    "image": "https://mlola.com/og-image.jpg",
+    "foundingDate": "2024",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Sidoarjo, Indonesia",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sidoarjo",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "Indonesia"
+      }
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Indonesia"
+      },
+      {
+        "@type": "City",
+        "name": "Jakarta"
+      },
+      {
+        "@type": "City", 
+        "name": "Surabaya"
+      },
+      {
+        "@type": "City",
+        "name": "Bandung"
+      },
+      {
+        "@type": "City",
+        "name": "Medan"
+      },
+      {
+        "@type": "City",
+        "name": "Semarang"
+      }
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "",
       "contactType": "customer service",
-      "email": "fikri.firdaus26@gmail.com"
+      "email": "fikri.firdaus26@gmail.com",
+      "availableLanguage": ["Indonesian", "English"],
+      "areaServed": "Indonesia"
     },
     "sameAs": [
-      "https://twitter.com/mlola",
-      "https://linkedin.com/company/mlola",
+      "https://twitter.com/mlola_indonesia",
+      "https://linkedin.com/company/mlola-indonesia",
       "https://github.com/mlola"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning", 
+      "Business Automation",
+      "RAG Implementation",
+      "Data Analytics",
+      "AI Integration",
+      "Private AI Deployment",
+      "Custom AI Development"
+    ],
+    "serviceType": [
+      "AI Solutions",
+      "Business Automation", 
+      "Data Analytics",
+      "AI Integration",
+      "RAG Implementation",
+      "Private AI Deployment"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "mlola AI Services",
+      "name": "Mlola AI Services Indonesia",
       "itemListElement": coreServices.map((service, index) => ({
         "@type": "Offer",
         "name": service.name,
         "description": service.description,
-        "category": service.category,
-        "position": index + 1
+        "category": "AI Services",
+        "position": index + 1,
+        "areaServed": "Indonesia",
+        "availableLanguage": ["Indonesian", "English"]
       }))
     }
   };
@@ -197,8 +286,103 @@ export default function Home() {
         "name": "Home",
         "item": "https://mlola.com"
       },
-
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Solutions Indonesia",
+        "item": "https://mlola.com#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "About Mlola Indonesia",
+        "item": "https://mlola.com#about"
+      }
     ]
+  };
+
+  // LocalBusiness Schema for Indonesia
+  const localBusinessData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mlola Indonesia",
+    "description": "Leading AI solutions and business automation provider in Indonesia, offering AI deployment, RAG implementation, and business automation services.",
+    "url": "https://mlola.com",
+    "telephone": "",
+    "email": "fikri.firdaus26@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sidoarjo",
+      "addressRegion": "Jawa Timur",
+      "addressCountry": "Indonesia"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-7.4479",
+      "longitude": "112.7378"
+    },
+    "areaServed": [
+       "Indonesia"
+     ],
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Indonesia"
+    },
+    "priceRange": "$$",
+    "currenciesAccepted": "IDR",
+    "paymentAccepted": "Bank Transfer, Credit Card",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "hasOfferCatalog": {
+       "@type": "OfferCatalog",
+       "name": "Mlola AI Services",
+       "itemListElement": [
+         {
+           "@type": "Offer",
+           "name": "AI Business Solutions",
+           "description": "AI implementation for business automation and operational efficiency improvement",
+           "category": "AI Solutions"
+         },
+         {
+           "@type": "Offer", 
+           "name": "RAG Implementation",
+           "description": "Retrieval-Augmented Generation implementation for enterprise knowledge base systems",
+           "category": "AI Implementation"
+         },
+         {
+           "@type": "Offer",
+           "name": "Business Automation",
+           "description": "Business process automation using AI and machine learning technologies",
+           "category": "Business Automation"
+         }
+       ]
+     }
+  };
+
+  // Service Schema for AI Services
+  const serviceData = {
+     "@context": "https://schema.org",
+     "@type": "Service",
+     "name": "AI Solutions and Business Automation",
+     "description": "Comprehensive AI solutions, RAG implementation, business automation, and custom AI integration services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Mlola Indonesia"
+    },
+    "areaServed": "Indonesia",
+    "availableLanguage": ["Indonesian", "English"],
+    "serviceType": "AI Solutions and Business Automation",
+    "category": "Technology Services",
+    "hasOfferCatalog": {
+       "@type": "OfferCatalog",
+       "name": "Mlola AI Service Catalog",
+      "itemListElement": coreServices.map((service, index) => ({
+        "@type": "Offer",
+        "name": service.name,
+        "description": service.description,
+        "category": "AI Services",
+        "position": index + 1
+      }))
+    }
   };
 
   return (
@@ -214,6 +398,18 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceData),
         }}
       />
 
@@ -267,8 +463,8 @@ export default function Home() {
               </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Mlola delivers comprehensive AI solutions including business automation, data analytics, flexible AI deployment, 
-              and custom integration. Choose from on-premise deployment for maximum control or cost-effective third-party APIs.
+              Mlola delivers comprehensive AI solutions including business automation, data analytics, and flexible AI deployment. 
+              Choose from private deployment (deploy models yourself) for maximum control or cost-effective third-party APIs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -293,8 +489,8 @@ export default function Home() {
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Private RAG</h3>
-                <p className="text-slate-600">Flexible AI deployment: on-premise for maximum control or third-party APIs for cost efficiency</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">RAG Solutions</h3>
+                <p className="text-slate-600">Flexible AI deployment: private (deploy models yourself on your own infrastructure) or cloud-based for cost efficiency</p>
               </div>
               
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
@@ -356,7 +552,7 @@ export default function Home() {
                 Solving Your <span className="text-blue-600">Business Challenges</span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Discover how Mlola&apos;s AI solutions can transform your business by addressing specific operational challenges and driving measurable results.
+                Discover how Mlola's AI solutions can transform your business by addressing specific operational challenges and driving measurable results.
               </p>
             </div>
 
@@ -400,6 +596,11 @@ export default function Home() {
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                   Our team works on developing AI solutions that range from implementing RAG systems to creating custom integrations for business processes. We approach each project with attention to the practical challenges of AI adoption in business environments.
                 </p>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  We specialize in creating intelligent solutions that transform how businesses operate. 
+              Our expertise spans from automated workflows to advanced analytics, with flexible deployment 
+              options including private deployment (deploy models yourself) for enhanced security and control.
+                </p>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed">
                   We recognize that adopting AI technology involves considerations around compliance, scalability, and integration. Our goal is to develop solutions that address these practical requirements while providing value to your business operations.
                 </p>
@@ -411,7 +612,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900 mb-6">Flexible AI Solutions</h3>
                   <p className="text-slate-600 leading-relaxed text-lg mb-8">
-                    We provide adaptable AI deployment strategies tailored to your specific requirements and budget. Whether you need maximum security with on-premise deployment, cost-efficiency with third-party APIs, or hybrid approaches, our team delivers solutions that align with your business goals and technical constraints.
+                    We provide adaptable AI deployment strategies tailored to your specific requirements and budget. Whether you need maximum security with private deployment (deploy models yourself), cost-efficiency with third-party APIs, or hybrid approaches, our team delivers solutions that align with your business goals and technical constraints.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
@@ -421,7 +622,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>On-Premise Options</span>
+                      <span>Private Options</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-600">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -456,7 +657,7 @@ export default function Home() {
               Ready to Transform Your Business with <span className="text-blue-600">AI?</span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Ready to implement AI solutions that drive real business results? Whether you need business automation, private RAG deployment, or custom AI integration, we&apos;re here to help you succeed.
+              Ready to implement AI solutions that drive real business results? Whether you need business automation, private RAG deployment, or custom AI integration, we're here to help you succeed.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
