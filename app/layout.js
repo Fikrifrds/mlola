@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "mlola - Innovative Tech Solutions",
-  description: "Discover cutting-edge technology products including Datafawn, Tubegrasp, Conversease, Denahku, and Grammarquick. Innovative solutions for modern businesses.",
+  title: "Mlola - Solusi AI & Otomasi Bisnis Indonesia",
+  description: "Mlola bantu bisnis Indonesia pakai teknologi AI dengan cara yang praktis. Dari otomasi proses sampai analisis data, kami sesuaikan dengan kebutuhan dan budget perusahaan Anda.",
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
