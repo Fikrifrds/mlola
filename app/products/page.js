@@ -46,7 +46,7 @@ function ProductsPage() {
       features: language === 'id'
         ? ['Floor Plan Designer', 'Interior Layout', 'Export Multiple Formats', 'Collaboration Tools']
         : ['Floor Plan Designer', 'Interior Layout', 'Export Multiple Formats', 'Collaboration Tools'],
-      url: '#',
+      url: 'https://denahku.com',
       gradient: 'from-blue-50 to-white'
     }
   ];
