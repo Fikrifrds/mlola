@@ -141,6 +141,7 @@ const translations = {
     },
     nav: {
       aiSolutions: "Solusi AI",
+      products: "Produk",
       about: "Tentang",
       contact: "Kontak",
       getStarted: "Mulai",
@@ -282,9 +283,10 @@ const translations = {
     },
     nav: {
       aiSolutions: "AI Solutions",
+      products: "Products",
       about: "About",
       contact: "Contact",
-      getStarted: "Get Started", 
+      getStarted: "Get Started",
       datafawn: "Datafawn"
     }
   }

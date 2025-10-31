@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Cog, 
+import {
+  Cog,
   Database,
   Shield,
   MapPin
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from '../hooks/useLanguage';
-import LanguageSwitcher from '../components/LanguageSwitcher';
+import Header from '../components/Header';
 
 function HomePage() {
   const { t, language } = useLanguage();
@@ -130,42 +130,7 @@ function HomePage() {
 
       <div id="top" className="min-h-screen bg-white">
         {/* Header */}
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50" role="banner">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-4">
-              <Link href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-                <Image src="/mlola-logo.svg" alt="Mlola Logo" width={40} height={40} className="w-10 h-10" />
-                <span className="text-xl font-semibold text-slate-800">Mlola</span>
-              </Link>
-              
-              <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-                <a href="#services" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.aiSolutions')}</a>
-                <a href="#about" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.about')}</a>
-                <a href="#contact" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.contact')}</a>
-              </nav>
-              
-              <div className="flex items-center gap-4">
-                <LanguageSwitcher />
-                <a 
-                  href="#contact" 
-                  className="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium text-sm hover:bg-blue-700"
-                >
-                  {t('nav.getStarted')}
-                </a>
-                <a 
-                  href="https://datafawn.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-orange-50 border border-orange-200 px-4 py-2 rounded-lg font-medium hover:bg-orange-100 hover:border-orange-300 flex items-center gap-2 transition-all duration-200"
-                  title="Visit DataFawn"
-                >
-                  <Image src="/product_logos/dataFawn.png" alt="DataFawn Logo" width={20} height={20} className="w-5 h-5" />
-                  <span className="text-sm font-semibold hidden lg:inline">{t('nav.datafawn')}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         {/* Hero Section */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50" role="main">

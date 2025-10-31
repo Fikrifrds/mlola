@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, FileText, MessageCircle, Search, Database, Shield, Zap } from 'lucide-react';
 import { LanguageProvider, useLanguage } from '../../../hooks/useLanguage';
-import LanguageSwitcher from '../../../components/LanguageSwitcher';
+import Header from '../../../components/Header';
 
 function RAGSystemPage() {
   const { t, language } = useLanguage();
@@ -116,17 +116,7 @@ function RAGSystemPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <Link href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-              <Image src="/mlola-logo.svg" alt="Mlola Logo" width={40} height={40} className="w-10 h-10" />
-              <span className="text-xl font-semibold text-slate-800">Mlola</span>
-            </Link>
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-white">
