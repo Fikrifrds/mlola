@@ -48,33 +48,7 @@ function ProductsPage() {
         : ['Floor Plan Designer', 'Interior Layout', 'Export Multiple Formats', 'Collaboration Tools'],
       url: '#',
       gradient: 'from-blue-50 to-white'
-    },
-    // {
-    //   name: 'GrammarQuick',
-    //   logo: '/product_logos/grammarquick.avif',
-    //   image: '/product_images/grammarquick.png',
-    //   description: language === 'id'
-    //     ? 'AI-powered grammar checker dan writing assistant untuk meningkatkan kualitas tulisan dalam berbagai bahasa.'
-    //     : 'AI-powered grammar checker and writing assistant to improve writing quality in multiple languages.',
-    //   features: language === 'id'
-    //     ? ['Grammar Checking', 'Style Improvement', 'Tone Detection', 'Plagiarism Detection']
-    //     : ['Grammar Checking', 'Style Improvement', 'Tone Detection', 'Plagiarism Detection'],
-    //   url: '#',
-    //   gradient: 'from-green-50 to-white'
-    // },
-    // {
-    //   name: 'Conversease',
-    //   logo: '/product_logos/conversease.png',
-    //   image: '/product_images/conversease.png',
-    //   description: language === 'id'
-    //     ? 'Platform chatbot dan conversational AI untuk meningkatkan customer engagement dan otomasi customer service.'
-    //     : 'Chatbot and conversational AI platform to enhance customer engagement and customer service automation.',
-    //   features: language === 'id'
-    //     ? ['AI Chatbot Builder', 'Multi-channel Support', 'Analytics Dashboard', 'Custom Integrations']
-    //     : ['AI Chatbot Builder', 'Multi-channel Support', 'Analytics Dashboard', 'Custom Integrations'],
-    //   url: '#',
-    //   gradient: 'from-purple-50 to-white'
-    // }
+    }
   ];
 
   return (

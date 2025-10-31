@@ -18,20 +18,20 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-            <a href="/#services" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.aiSolutions')}</a>
+            <Link href="/#services" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.aiSolutions')}</Link>
             <Link href="/products" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.products')}</Link>
-            <a href="/#about" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.about')}</a>
-            <a href="/#contact" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.contact')}</a>
+            <Link href="/#about" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.about')}</Link>
+            <Link href="/#contact" className="text-slate-600 hover:text-slate-900 font-medium text-sm">{t('nav.contact')}</Link>
           </nav>
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <a
+            <Link
               href="/#contact"
               className="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium text-sm hover:bg-blue-700"
             >
               {t('nav.getStarted')}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
