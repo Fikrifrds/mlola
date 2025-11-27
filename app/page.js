@@ -18,19 +18,19 @@ function HomePage() {
   const coreServices = t('coreServices');
   const businessChallenges = t('businessChallenges');
 
-  // Structured Data (JSON-LD) for SEO - Indonesia focused
+  // Structured Data (JSON-LD) for SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@type": ["Organization", "TechnologyCompany"],
-    "name": "Mlola Indonesia",
-    "alternateName": ["Mlola", "Mlola AI Indonesia"],
-    "description": "Penyedia solusi AI dan otomasi bisnis terpercaya di Indonesia. Spesialisasi RAG system, integrasi ChatGPT, otomasi bisnis, dan analisis data untuk perusahaan Indonesia.",
+    "name": "Mlola",
+    "alternateName": ["Mlola", "Mlola AI"],
+    "description": "Penyedia solusi AI dan otomasi bisnis terpercaya. Spesialisasi RAG system, integrasi ChatGPT, otomasi bisnis, dan analisis data untuk perusahaan.",
     "url": "https://mlola.com",
     "logo": "https://mlola.com/mlola-logo.svg",
     "foundingDate": "2024",
     "foundingLocation": {
       "@type": "Place",
-      "name": "Sidoarjo, Jawa Timur, Indonesia",
+      "name": "Sidoarjo, Jawa Timur",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Sidoarjo",
@@ -38,37 +38,7 @@ function HomePage() {
         "addressCountry": "ID"
       }
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Indonesia"
-    },
-    "serviceArea": [
-      {
-        "@type": "City",
-        "name": "Jakarta",
-        "addressCountry": "ID"
-      },
-      {
-        "@type": "City", 
-        "name": "Surabaya",
-        "addressCountry": "ID"
-      },
-      {
-        "@type": "City",
-        "name": "Bandung",
-        "addressCountry": "ID"
-      },
-      {
-        "@type": "City",
-        "name": "Medan",
-        "addressCountry": "ID"
-      },
-      {
-        "@type": "City",
-        "name": "Yogyakarta", 
-        "addressCountry": "ID"
-      }
-    ],
+    "areaServed": "Global",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
@@ -78,13 +48,13 @@ function HomePage() {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Layanan AI Indonesia",
+      "name": "Layanan AI",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service", 
-            "name": "RAG System Indonesia",
+            "name": "RAG System",
             "description": "Sistem knowledge base berbasis AI untuk dokumen perusahaan"
           }
         },
@@ -114,7 +84,7 @@ function HomePage() {
         }
       ]
     },
-    "keywords": "solusi AI Indonesia, RAG system Indonesia, ChatGPT integration, otomasi bisnis, AI consultant Jakarta, business automation Indonesia",
+    "keywords": "solusi AI, RAG system, ChatGPT integration, otomasi bisnis, business automation",
     "inLanguage": "id"
   };
 

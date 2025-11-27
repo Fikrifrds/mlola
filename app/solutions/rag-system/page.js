@@ -346,7 +346,7 @@ function RAGSystemPage() {
                 </h3>
                 <div className="space-y-1">
                   {[
-                    language === 'id' ? 'Bahasa Indonesia' : 'Indonesian',
+                    language === 'id' ? 'Bahasa' : 'Local Language',
                     'English',
                     language === 'id' ? 'Lainnya' : 'Others'
                   ].map((lang, index) => (

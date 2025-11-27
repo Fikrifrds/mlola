@@ -12,25 +12,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mlola - Solusi AI & Otomasi Bisnis Indonesia | RAG System, ChatGPT Integration",
-  description: "Penyedia solusi AI terpercaya untuk bisnis Indonesia. Layanan otomasi bisnis, RAG system, integrasi ChatGPT, dan analisis data. Melayani Jakarta, Surabaya, Bandung. Konsultasi gratis!",
-  keywords: "solusi AI Indonesia, otomasi bisnis Indonesia, RAG system Indonesia, ChatGPT integration Indonesia, AI consultant Jakarta, business automation Surabaya, data analytics Bandung",
-  authors: [{ name: "Mlola Indonesia" }],
-  creator: "Mlola Indonesia",
-  publisher: "Mlola Indonesia",
+  title: "Mlola - Solusi AI & Otomasi Bisnis | RAG System, ChatGPT Integration",
+  description: "Penyedia solusi AI terpercaya untuk bisnis. Layanan otomasi bisnis, RAG system, integrasi ChatGPT, dan analisis data. Konsultasi gratis!",
+  keywords: "solusi AI, otomasi bisnis, RAG system, ChatGPT integration, AI consultant, business automation, data analytics",
+  authors: [{ name: "Mlola" }],
+  creator: "Mlola",
+  publisher: "Mlola",
   robots: "index, follow",
   openGraph: {
-    title: "Mlola - Solusi AI & Otomasi Bisnis Indonesia",
-    description: "Penyedia solusi AI terpercaya untuk bisnis Indonesia. RAG system, otomasi bisnis, integrasi ChatGPT, dan analisis data.",
+    title: "Mlola - Solusi AI & Otomasi Bisnis",
+    description: "Penyedia solusi AI terpercaya untuk bisnis. RAG system, otomasi bisnis, integrasi ChatGPT, dan analisis data.",
     url: "https://mlola.com",
-    siteName: "Mlola Indonesia",
+    siteName: "Mlola",
     locale: "id_ID",
     type: "website"
   },
   twitter: {
     card: "summary",
-    title: "Mlola - Solusi AI & Otomasi Bisnis Indonesia", 
-    description: "Penyedia solusi AI terpercaya untuk bisnis Indonesia. RAG system, otomasi bisnis, integrasi ChatGPT."
+    title: "Mlola - Solusi AI & Otomasi Bisnis", 
+    description: "Penyedia solusi AI terpercaya untuk bisnis. RAG system, otomasi bisnis, integrasi ChatGPT."
   },
   alternates: {
     canonical: "https://mlola.com"

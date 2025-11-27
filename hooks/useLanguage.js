@@ -8,8 +8,8 @@ const LanguageContext = createContext();
 const translations = {
   id: {
     page: {
-      title: "Solusi AI untuk Bisnis Indonesia",
-      description: "Mlola membantu bisnis Indonesia menggunakan teknologi AI dengan cara yang praktis. Dari otomasi proses hingga analisis data, kami sesuaikan dengan kebutuhan dan anggaran perusahaan Anda.",
+      title: "Solusi AI untuk Bisnis Anda",
+      description: "Mlola membantu bisnis menggunakan teknologi AI dengan cara yang praktis. Dari otomasi proses hingga analisis data, kami sesuaikan dengan kebutuhan dan anggaran perusahaan Anda.",
       badge: "Solusi AI & Otomasi Bisnis",
       getConsultation: "Konsultasi Gratis",
       exploreSolutions: "Lihat Solusi Kami"
@@ -85,7 +85,7 @@ const translations = {
     about: {
       title: "Bagaimana Mlola Mengadaptasi Solusi AI untuk Bisnis Anda",
       paragraphs: [
-        "Mlola adalah perusahaan yang fokus membantu bisnis Indonesia menggunakan AI dengan cara yang praktis. Kami memahami bahwa setiap perusahaan memiliki kebutuhan yang berbeda, sehingga solusi kami disesuaikan dengan kondisi spesifik masing-masing.",
+        "Mlola adalah perusahaan yang fokus membantu bisnis menggunakan AI dengan cara yang praktis. Kami memahami bahwa setiap perusahaan memiliki kebutuhan yang berbeda, sehingga solusi kami disesuaikan dengan kondisi spesifik masing-masing.",
         "Tim kami mengembangkan solusi AI mulai dari sistem RAG hingga integrasi custom untuk proses bisnis. Setiap proyek kami tangani dengan memperhatikan tantangan nyata dalam implementasi AI di lingkungan bisnis.",
         "Keahlian kami mencakup workflow otomatis hingga analitik advanced. Tersedia pilihan deployment yang fleksibel - di server sendiri untuk keamanan maksimal, atau menggunakan cloud untuk efisiensi biaya.",
         "Kami memahami bahwa adopsi teknologi AI melibatkan banyak pertimbangan seperti compliance, scalability, dan integrasi. Tujuan kami adalah mengembangkan solusi yang mengatasi masalah praktis ini sambil memberikan nilai nyata untuk operasional bisnis Anda."
@@ -137,7 +137,7 @@ const translations = {
         "Kontak",
         "Studi Kasus"
       ],
-      location: "Sidoarjo, Indonesia"
+      location: "Sidoarjo"
     },
     nav: {
       aiSolutions: "Solusi AI",
@@ -150,8 +150,8 @@ const translations = {
   },
   en: {
     page: {
-      title: "AI Solutions for Indonesian Businesses", 
-      description: "Mlola helps Indonesian businesses implement AI technology in practical ways. From process automation to data analysis, we customize solutions to match your company's specific needs and budget requirements.",
+      title: "AI Solutions for Your Business", 
+      description: "Mlola helps businesses implement AI technology in practical ways. From process automation to data analysis, we customize solutions to match your company's specific needs and budget requirements.",
       badge: "AI Solutions & Business Automation",
       getConsultation: "Free Consultation",
       exploreSolutions: "Explore Our Solutions"
@@ -227,7 +227,7 @@ const translations = {
     about: {
       title: "How Mlola Adapts AI Solutions to Your Business",
       paragraphs: [
-        "Mlola is a company dedicated to helping Indonesian businesses implement AI technology in practical and effective ways. We understand that each company has unique requirements, so we tailor our solutions to match specific organizational needs.",
+        "Mlola is a company dedicated to helping businesses implement AI technology in practical and effective ways. We understand that each company has unique requirements, so we tailor our solutions to match specific organizational needs.",
         "Our team develops comprehensive AI solutions ranging from RAG systems to custom integrations for business processes. Each project is handled with careful attention to the real-world challenges of implementing AI in business environments.",
         "Our expertise encompasses automated workflows to advanced analytics solutions. We offer flexible deployment options - whether on your own servers for enhanced security, or utilizing cloud infrastructure for greater cost efficiency.",
         "We recognize that adopting AI technology involves numerous considerations including compliance, scalability, and system integration. Our objective is to develop solutions that address these practical requirements while delivering measurable value to your business operations."
@@ -279,7 +279,7 @@ const translations = {
         "Contact",
         "Case Studies"
       ],
-      location: "Sidoarjo, Indonesia"
+      location: "Sidoarjo"
     },
     nav: {
       aiSolutions: "AI Solutions",
